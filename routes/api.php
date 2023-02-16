@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\AnswerController;
-use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\SubmissionController;
 use Illuminate\Http\Request;
@@ -25,6 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('quizzes/{id}/questions', [QuizController::class, 'questions']);
 Route::resource('quizzes', QuizController::class);
-Route::resource('questions', QuestionController::class);
-Route::resource('answers', AnswerController::class);
 Route::resource('submissions', SubmissionController::class);
